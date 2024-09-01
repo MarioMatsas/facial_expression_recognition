@@ -86,8 +86,6 @@ def load_data(height, width, batch_size):
         tf.keras.layers.RandomFlip("horizontal"),
         tf.keras.layers.RandomRotation(0.1),
         tf.keras.layers.RandomZoom(0.1),
-        tf.keras.layers.RandomHeight(0.1),
-        tf.keras.layers.RandomWidth(0.1)
     ])
 
     # Apply data augmentation only to training data
