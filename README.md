@@ -1,3 +1,3 @@
 ### Introduction <br />
-## Face Fetection <br />
-## Facial Expression Recognition
+### Face Fetection <br />
+### Facial Expression Recognition
