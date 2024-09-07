@@ -1,0 +1,5 @@
+# Face detection
+https://www.kaggle.com/datasets/ngoduy/dataset-for-face-detection
+
+# Facial expression recognition
+https://www.kaggle.com/datasets/noamsegal/affectnet-training-data
