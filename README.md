@@ -28,13 +28,13 @@ Provided below is the **accuracy and loss graph** that corresponds to my model:
 
 ## Datasets
 The datasets used are:
-*A combination of WIDERFACE, FDDB and LFPW for FD
-*AffectNet for FER
+* A combination of WIDERFACE, FDDB and LFPW for FD
+* AffectNet for FER
 both of which can be found in the links provided in the `datasets.txt` file.
 
 ## Things To Note
-*A result of 0.68 may seem fairly low, however the reason for that is not the architecture but the data provided. AffectNet is a dataset with pretty clean data ,however it has a lot of variety in order to better generalize thus dropping its accuracy. Another dataset that suffers the same, if not a worse fate is the popular fer2013 dataset which contains A LOT of muddy images such as cartoon faces, images with watermarks and even exagerated depections of expressions such as fire exiting a persons nose when he is mad. Obviously we humans have no problem classifying an expression even under such circumstances, however the computer isn't as lucky and capable, that's why we have to teach it that those red hairing dont really matter!  
+* A result of 0.68 may seem fairly low, however the reason for that is not the architecture but the data provided. AffectNet is a dataset with pretty clean data ,however it has a lot of variety in order to better generalize thus dropping its accuracy. Another dataset that suffers the same, if not a worse fate is the popular fer2013 dataset which contains A LOT of muddy images such as cartoon faces, images with watermarks and even exagerated depections of expressions such as fire exiting a persons nose when he is mad. Obviously we humans have no problem classifying an expression even under such circumstances, however the computer isn't as lucky and capable, that's why we have to teach it that those red hairing dont really matter!  
 
-*I noticed that the learning rate and even the padding may have to be changed deopending on the cpu or gpu you are using to train the model. (on google colab a learning rate of 0.000005 was needed for accuracy to start increasing, whereas in my computer 0.0005 gets the job done)
+* I noticed that the learning rate and even the padding may have to be changed deopending on the cpu or gpu you are using to train the model. (on google colab a learning rate of 0.000005 was needed for accuracy to start increasing, whereas in my computer 0.0005 gets the job done)
 
-*Finally i would really recommend reading the `4.Dr.NVN FERNet` paper since, as a beginner, I found it to be incredibly insightful and helpful. 
+* Finally i would really recommend reading the `4.Dr.NVN FERNet` paper since, as a beginner, I found it to be incredibly insightful and helpful. 
