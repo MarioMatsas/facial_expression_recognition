@@ -7,8 +7,8 @@ A program that combines the use of facial detection and facial expression recogn
 * Neutral
 * Disgust
 * Surprise
-
-**IMAGE 1**
+![graph](assets/graph.jpg)
+![graph](assets/graph.jpg)
 
 In the proccess it is able to provide an enjoyable exprerience, as well as a learning ground for anyone looking to delve into one of the most important parts of **Machine and Deep Learning**, that being **Convolution Nural Networks** (CNN).
 
