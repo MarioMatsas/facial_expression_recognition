@@ -24,7 +24,7 @@ The files used are `fd_data_prep.py`,`fd_training.py` and `yolov8_config.yaml`. 
 This part is without a doubt the most impressive and fun of the entire project! The files used are `fer_data_prep` which provides functions for data proccessing and loading, `fer_model_architecture` which shows what my model architecture is, and `fer_training` which works as a main file combining the other 2 and using all that they provide to create and train a facial expression recognition model. The model architecture I used
 is the one presented in the `4.Dr.NVN FERNet.pdf` file with slight modification to the training proccess, hyperparameters and the removal of CNN block. The provided model `models/aff_model_test_2.keras` boasts a really good performance of **68% accuracy**, which is on par with other architectures of similar nature.
 Provided below is the **accuracy and loss graph** that corresponds to my model:
-![graph](https://github.com/MarioMatsas/facial_expression_recognition/assets/graph.jpg)
+![graph](assets/graph.jpg)
 
 ## Datasets
 The datasets used are:
