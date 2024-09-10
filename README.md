@@ -37,4 +37,8 @@ both of which can be found in the links provided in the `datasets.txt` file.
 
 * I noticed that the learning rate and even the padding may have to be changed deopending on the cpu or gpu you are using to train the model. (on google colab a learning rate of 0.000005 was needed for accuracy to start increasing, whereas in my computer 0.0005 gets the job done)
 
+* File paths may need to be changed across many files according to what files you plan on using
+  
+* The `dataset_affect_trainable` data file was modified by hand at the very end to ensure that we have an almost equal amount of images for each facial expression (otherwise an imbalance of data will almost certaintly lead to poor results)
+
 * Finally i would really recommend reading the `4.Dr.NVN FERNet` paper since, as a beginner, I found it to be incredibly insightful and helpful. 
