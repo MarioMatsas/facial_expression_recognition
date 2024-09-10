@@ -2,13 +2,14 @@ import os
 import shutil
 import pandas as pd
 from tensorflow.keras.preprocessing import image
+from sklearn.model_selection import train_test_split
 import random
 import numpy as np
 
 # *************** PART 1 ***************** 
 def prepare_data(): 
     # Load the CSV file
-    csv_file = 'labels.csv'
+    csv_file = 'affectnet_dataset/labels.csv'
     data = pd.read_csv(csv_file)
 
     # Define the root directory for moving images
@@ -53,6 +54,41 @@ def prepare_data():
         new_folder_path = os.path.join(root_dir, new_name)
 
         os.rename(old_folder_path, new_folder_path)
+
+    target_dir = 'dataset_affect_trainable'
+
+    for expr in folder_mapping.values():
+        os.makedirs(os.path.join(target_dir, 'train', expr), exist_ok=True)
+        os.makedirs(os.path.join(target_dir, 'val', expr), exist_ok=True)
+        os.makedirs(os.path.join(target_dir, 'test', expr), exist_ok=True)
+
+    # Split the data
+    for expr in folder_mapping.values():
+        expr_folder = os.path.join(root_dir, expr)
+        images = os.listdir(expr_folder)
+
+        # Split into train, val, and test (80%, 10%, 10%)
+        train_images, test_val_images = train_test_split(images, test_size=0.2, random_state=42)
+        val_images, test_images = train_test_split(test_val_images, test_size=0.5, random_state=42)
+
+        # Copy images to train directory
+        for img in train_images:
+            src = os.path.join(expr_folder, img)
+            dst = os.path.join(target_dir, 'train', expr, img)
+            shutil.copy2(src, dst)
+
+        # Copy images to val directory
+        for img in val_images:
+            src = os.path.join(expr_folder, img)
+            dst = os.path.join(target_dir, 'val', expr, img)
+            shutil.copy2(src, dst)
+
+        # Copy images to test directory
+        for img in test_images:
+            src = os.path.join(expr_folder, img)
+            dst = os.path.join(target_dir, 'test', expr, img)
+            shutil.copy2(src, dst)
+
 
 
 # *********************************** PART 2 **********************************

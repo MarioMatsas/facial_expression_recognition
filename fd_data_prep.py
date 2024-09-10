@@ -64,10 +64,10 @@ def split_data(images_source_dir, labels_source_dir, images_train_dir, images_va
     # Define the source and destination directories
     images_source_dir = 'yolo_images'  # Path to your images folder
     labels_source_dir = 'yolo_labels'  # Path to your labels folder
-    images_train_dir = 'data/images/train'
-    images_val_dir = 'data/images/val'
-    labels_train_dir = 'data/labels/train'
-    labels_val_dir = 'data/labels/val'
+    images_train_dir = 'fd_data/images/train'
+    images_val_dir = 'fd_data/images/val'
+    labels_train_dir = 'fd_data/labels/train'
+    labels_val_dir = 'fd_data/labels/val'
 
     # Create the destination directories if they don't exist
     os.makedirs(images_train_dir, exist_ok=True)

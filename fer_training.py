@@ -17,6 +17,9 @@ HEIGHT = 48
 NUM_CLASSES = 7
 EPOCHS = 60
 
+# Prepare the data
+#fdp.prepare_data()
+
 # Load training data
 train_images, train_labels = fdp.load_data(HEIGHT, WIDTH, NUM_CLASSES, os.path.join("dataset_affect_trainable", "train"))
 
