@@ -13,8 +13,8 @@ A program that combines the use of facial detection and facial expression recogn
 In the proccess it is able to provide an enjoyable exprerience, as well as a learning ground for anyone looking to delve into one of the most important parts of **Machine and Deep Learning**, that being **Convolution Nural Networks** (CNN).
 
 The idea and pipeline of this program is actually quite simple. What we want is 2 things:
-* Being able to receive any image, whether that would be from a camera, a saved photo or any other means, and be able to detect all the faces present in that image and outline them with a bounding box
-* Being able to extract key facial feautures using our CNN to deduce the facial expressions of all the faces found in the previous step
+* Being able to receive any image, whether that would be from a camera, a saved photo or any other means, and be able to detect all the faces present in that image and outline them with a bounding box.
+* Being able to extract key facial feautures using our CNN to deduce the facial expressions of all the faces found in the previous step.
 
 ## Facial Detection
 For the facial detection part of this project I took advantage of the speed and accuracy that the YOLOv8 nano model provides, training it with a significant amount of data so that it is able to give us incredible results.
@@ -37,8 +37,10 @@ both of which can be found in the links provided in the `datasets.txt` file.
 
 * I noticed that the learning rate and even the padding may have to be changed deopending on the cpu or gpu you are using to train the model. (on google colab a learning rate of 0.000005 was needed for accuracy to start increasing, whereas in my computer 0.0005 gets the job done)
 
-* File paths may need to be changed across many files according to what files you plan on using
+* File paths may need to be changed across many files according to what files you plan on using.
   
-* The `dataset_affect_trainable` data file was modified by hand at the very end to ensure that we have an almost equal amount of images for each facial expression (otherwise an imbalance of data will almost certaintly lead to poor results)
+* The `dataset_affect_trainable` data file was modified by hand at the very end to ensure that we have an almost equal amount of images for each facial expression. (otherwise an imbalance of data will almost certaintly lead to poor results)
+
+* Run the `camera_test.py` file to test the effectiveness of the provided models using your camera feed.
 
 * Finally i would really recommend reading the `4.Dr.NVN FERNet` paper since, as a beginner, I found it to be incredibly insightful and helpful. 
